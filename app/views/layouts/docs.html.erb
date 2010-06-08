@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="jp" lang="jp">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Docs</title>
+  <%= stylesheet_link_tag 'application' %>
+</head>
+<body>
+  <div align="right">
+    <% form_tag root_path, :method => 'get' do %>
+      <%= link_to 'New doc', new_doc_path %>
+      <%= text_field_tag :s, params[:s] %>
+      <%= submit_tag 'Search', :name => nil %>
+    <% end %>
+  </div>
+   
+  <h1><%= link_to 'Docs', root_path %></h1>
+
+<%= yield %>
+
+</body>
+</html>
