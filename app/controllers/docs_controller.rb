@@ -9,7 +9,7 @@ class DocsController < ApplicationController
       Doc.search(params[:s])
     else
       Doc
-    end.paginate(:page => params[:page], :order => 'updated_at desc', :per_page => 10)
+    end.paginate(:page => params[:page], :order => 'updated_at desc')
 
     respond_to do |format|
       format.html # index.html.erb
