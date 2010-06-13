@@ -1,9 +1,9 @@
 class ChangeDocs < ActiveRecord::Migration
   def self.up
-    change_column :text, :text
+    change_column :docs, :text, :text
   end
 
   def self.down
-    change_column :text, :string
+    change_column :docs, :text, :string
   end
 end
