@@ -1,2 +1,9 @@
-user: <%= ENV['AUTH_USER'] || 'user' %>
-password: <%= ENV['AUTH_PASS'] || 'pass' %>
+development:
+  user: <%= ENV['AUTH_USER'] || 'user' %>
+  password: <%= ENV['AUTH_PASS'] || 'pass' %>
+test:
+  user: 'user'
+  password: 'pass'
+production:
+  user: <%= ENV['AUTH_USER'] || 'user' %>
+  password: <%= ENV['AUTH_PASS'] || 'pass' %>
