@@ -1,12 +1,4 @@
-<% @docs.each do |doc| %>
-  <h2><%= link_to doc.title, doc %></h2>
-  <div><%=sbr doc.text %></div>
-  <div align="right"><%=h 'Created at ' + doc.created_at.to_s(:db) %><%= ' Updated at ' + doc.updated_at.to_s(:db) %></div> 
-  <div align="right">
-    <%= link_to 'Edit', edit_doc_path(doc) %>
-    <%= link_to 'Destroy', doc, :confirm => 'Are you sure?', :method => :delete %>
-  </div>
-<% end %>
+<%= render :partial => "doc", :collection => @docs %>
 <br />
 
 <div align="center">
