@@ -1,8 +1,8 @@
 <h2><%= link_to doc.title, doc %></h2>
 <div><%=sbr doc.text %></div>
 <div align="right">
-  <%=h 'Created at ' + doc.created_at.to_s(:db) %>
-  <%= ' Updated at ' + doc.updated_at.to_s(:db) %>
+  <%=h 'Created at ' + doc.created_at.to_s(:simple) %>
+  <%=h ' Updated at ' + doc.updated_at.to_s(:simple) %>
 </div> 
 <div align="right">
   <%= link_to 'Edit', edit_doc_path(doc) %>
