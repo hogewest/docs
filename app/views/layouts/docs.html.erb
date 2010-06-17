@@ -4,7 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="jp" lang="jp">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Docs</title>
+  <title>
+    <% title = yield :title %>
+    <%=h title || AppConfig::APP_TITLE %>
+  </title>
   <%= stylesheet_link_tag 'application' %>
 </head>
 <body>
@@ -16,7 +19,7 @@
     <% end %>
   </div>
    
-  <h1><%= link_to 'Docs', root_path %></h1>
+  <h1><%= link_to AppConfig::APP_TITLE, root_path %></h1>
 
 <%= yield %>
 

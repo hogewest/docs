@@ -1,1 +1,2 @@
+<%=h content_for(:title, @doc.title + " - " + AppConfig::APP_TITLE) %>
 <%= render :partial => 'doc', :locals => {:doc => @doc} %>
