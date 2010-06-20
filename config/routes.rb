@@ -1,8 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :docs
-
   map.root :controller => 'docs', :action => 'index'
-  map.root_index 'index.html', :controller => 'docs', :action => 'index'
+  map.root_index '/index.html', :controller => 'docs', :action => 'index'
 
   map.docs 'index.:format', :controller => 'docs', :action => 'index', :conditions => {:method => :get}
   map.docs 'index.:format', :controller => 'docs', :action => 'create', :conditions => {:method => :post}
